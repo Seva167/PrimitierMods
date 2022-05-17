@@ -51,13 +51,15 @@ namespace Seva167.ThrusterMod
             vectorConstraint.constraintActive = true;
         }
 
+        public float Power { get; set; } = 1;
+
         private void FixedUpdate()
         {
             float tempC = cubeBase.heat.GetCelsiusTemperature();
 
             if (tempC >= 150)
             {
-                Vector3 force = -vectorPoint.transform.up * tempC;
+                Vector3 force = -vectorPoint.transform.up * tempC * Power;
                 cubeBase.rb.AddForceAtPosition(force, vectorPoint.transform.position);
                 audioSource.pitch = tempC / 600;
             }

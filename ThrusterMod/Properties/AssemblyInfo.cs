@@ -42,7 +42,7 @@ using Seva167.ThrusterMod;
 
 public static class BuildInfo
 {
-	public const string Version = "0.0.1.0";
+	public const string Version = "0.0.2.0";
 	public const string Authors = "Seva167";
 
 	public const string Name = "ThrusterMod";

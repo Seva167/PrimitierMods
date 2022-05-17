@@ -21,9 +21,18 @@ namespace Seva167.ThrusterMod
 			base.OnSceneWasLoaded(buildIndex, sceneName);
 
 			var thrusterMenu = InGameDebugTool.CreateMenu("Thruster Mod", "MainMenu");
-			var thrusterBtn = thrusterMenu.CreateButton("Spawn thruster", new System.Action(() =>
+
+			var smallThrusterBtn = thrusterMenu.CreateButton("Spawn small thruster", new System.Action(() =>
 			{
-				CubeGenerator.GenerateCube(thrusterMenu.transform.position, new Vector3(0.2f, 0.4f, 0.2f), CustomSubstanceSystem.GetSubstanceByName("SUB_ANCIENT_THRUSTER"));
+				CubeGenerator.GenerateCube(thrusterMenu.transform.position, new Vector3(0.2f, 0.4f, 0.2f), CustomSubstanceSystem.GetSubstanceByName("SUB_SMALL_ANCIENT_THRUSTER"));
+			}));
+			var mediumThrusterBtn = thrusterMenu.CreateButton("Spawn medium thruster", new System.Action(() =>
+			{
+				CubeGenerator.GenerateCube(thrusterMenu.transform.position, new Vector3(0.4f, 0.8f, 0.4f), CustomSubstanceSystem.GetSubstanceByName("SUB_MEDIUM_ANCIENT_THRUSTER"));
+			}));
+			var heavyThrusterBtn = thrusterMenu.CreateButton("Spawn heavy thruster", new System.Action(() =>
+			{
+				CubeGenerator.GenerateCube(thrusterMenu.transform.position, new Vector3(0.6f, 2.4f, 0.6f), CustomSubstanceSystem.GetSubstanceByName("SUB_HEAVY_ANCIENT_THRUSTER"));
 			}));
 		}
 
@@ -37,9 +46,11 @@ namespace Seva167.ThrusterMod
 			PMFSystem.EnableSystem<CustomSubstanceSystem>();
 			PMFSystem.EnableSystem<CustomAssetSystem>();
 
-			PMFHelper.AutoInject(System.Reflection.Assembly.GetExecutingAssembly());
-
 			Utils.AssetsManager.LoadAllAssets();
+
+			Builders.ThrusterMaterialBuilder.BuildMaterial();
+
+			PMFHelper.AutoInject(System.Reflection.Assembly.GetExecutingAssembly());
 		}
 	}
 }
