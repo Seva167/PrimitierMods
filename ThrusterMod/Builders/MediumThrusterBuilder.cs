@@ -24,10 +24,16 @@ namespace Seva167.ThrusterMod.Builders
             { 
                 EnName = "Medium Ancient Thruster",
                 JpName = "ミディアムエンシェントスラスター",
-                OnSubstanceInitialize = (CubeBase target) => 
+                /*OnSubstanceInitialize = (CubeBase target) => 
                 {
                     ThrusterBehavior thrusterBeh = target.gameObject.AddComponent<ThrusterBehavior>();
                     thrusterBeh.Power = 4f;
+                }*/
+                AddCustomCubeBehaviour = (CubeBase target) =>
+                {
+                    ThrusterBehavior thrusterBeh = target.gameObject.AddComponent<ThrusterBehavior>();
+                    thrusterBeh.Power = 4f;
+                    return thrusterBeh;
                 }
 
             });

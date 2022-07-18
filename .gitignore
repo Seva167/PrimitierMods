@@ -364,11 +364,6 @@ FodyWeavers.xsd
 /DemoMod/PMFToolConfig.json
 
 # PMF
-PrimitierModdingFramework/
-PMFTool/
-PMFTemplates/
-Dumps/
-Documentation/
-Dlls/
 DemoMod/
 *.pmfm
+*.sln

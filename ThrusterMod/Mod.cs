@@ -13,7 +13,7 @@ using UnityEngine.XR;
 namespace Seva167.ThrusterMod
 {
 
-	public class ThrusterMod : PrimitierMod
+	public class Mod : PrimitierMod
     {
 
 		public override void OnSceneWasLoaded(int buildIndex, string sceneName)

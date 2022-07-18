@@ -13,7 +13,7 @@ using UnityEngine.XR;
 namespace Seva167.CoalMod
 {
 
-	public class CoalMod : PrimitierMod
+	public class Mod : PrimitierMod
     {
 
 		public override void OnSceneWasLoaded(int buildIndex, string sceneName)

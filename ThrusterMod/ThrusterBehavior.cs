@@ -23,11 +23,8 @@ namespace Seva167.ThrusterMod
         private void Start()
         {
             cubeBase = GetComponent<CubeBase>();
-            PMFLog.Message(cubeBase.name);
-            PMFLog.Message(cubeBase.rb.velocity);
 
             cubeBase.cubeAppearance.meshFilter.mesh = AssetsManager.ThrusterMesh;
-            PMFLog.Message(AssetsManager.ThrusterMesh.name);
 
             audioSource = gameObject.AddComponent<AudioSource>();
 
@@ -36,7 +33,6 @@ namespace Seva167.ThrusterMod
             audioSource.loop = true;
             audioSource.pitch = 0;
             audioSource.Play();
-            PMFLog.Message(audioSource.clip.name);
 
             vectorPoint = new GameObject("ThrusterVector");
             vectorPoint.transform.position = cubeBase.transform.position;
@@ -64,9 +60,7 @@ namespace Seva167.ThrusterMod
                 audioSource.pitch = tempC / 600;
             }
             else
-            {
                 audioSource.pitch = 0;
-            }
         }
 
         public void OnCollideWithCube(CubeBase colCubeBase) { }
