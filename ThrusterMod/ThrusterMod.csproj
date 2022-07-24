@@ -7,7 +7,7 @@
     <Title>Thruster Mod</Title>
     <Description>Thrusters!</Description>
     <Authors>Seva167</Authors>
-    <Version>0.2</Version>
+    <Version>0.2.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\**" />

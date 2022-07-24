@@ -18,7 +18,8 @@ namespace Seva167.ThrusterMod.Builders
             thrusterSubstance.sectionMaterialV = ThrusterMat.name;
             thrusterSubstance.sectionMaterialH = ThrusterMat.name;
             thrusterSubstance.strength = float.PositiveInfinity;
-            thrusterSubstance.density -= 1;
+            thrusterSubstance.density /= 2;
+            thrusterSubstance.thermalConductivity *= 5;
 
             CustomSubstanceSystem.LoadCustomSubstance(thrusterSubstance, new CustomSubstanceSettings()
             { 
