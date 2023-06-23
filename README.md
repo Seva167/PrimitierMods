@@ -1,3 +1,4 @@
+# NOTE: PMF is deprecated
 # My mods for primitier
 This is collection of my mods for primitier game.
 
